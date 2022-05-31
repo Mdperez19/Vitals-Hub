@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+.p-card .p-card-body {
+    padding: 1.25rem;
+    box-shadow: -11px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -11px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -11px 10px 5px 0px rgba(0,0,0,0.75);
+  }
