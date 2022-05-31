@@ -1,0 +1,8 @@
+.fondo-color {
+    background: rgb(208,230,165);
+    background: linear-gradient(0deg, rgba(208,230,165,0.6194852941176471) 0%, rgba(134,227,206,0.3477766106442577) 100%);
+}
+
+/*
+background: rgb(1,145,180);
+background: radial-gradient(circle, rgba(1,145,180,0.10688025210084029) 0%, rgba(134,227,206,1) 100%);*/

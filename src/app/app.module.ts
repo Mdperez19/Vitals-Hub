@@ -15,11 +15,15 @@ import {ButtonModule} from 'primeng/button';
 
 import { LoginComponent } from './components/sesion/login/login.component';
 import { SesionComponent } from './components/sesion/sesion.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PrincipalComponent } from './components/principal/principal.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SesionComponent
+    SesionComponent,
+    FooterComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
