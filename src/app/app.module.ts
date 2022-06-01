@@ -17,13 +17,16 @@ import { LoginComponent } from './components/sesion/login/login.component';
 import { SesionComponent } from './components/sesion/sesion.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PrincipalComponent } from './components/principal/principal.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavbarService } from './services/navbar.service';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SesionComponent,
     FooterComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { PrincipalComponent } from './components/principal/principal.component';
     DividerModule,
     ButtonModule
   ],
-  providers: [],
+  providers: [NavbarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
