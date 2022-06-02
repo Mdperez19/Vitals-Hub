@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule } from '@angular/forms';
 /**NGPrime */
 import {CardModule} from 'primeng/card';
 import {InputTextModule} from 'primeng/inputtext';
@@ -16,6 +16,10 @@ import {AvatarModule} from 'primeng/avatar';
 import {MenuModule} from 'primeng/menu';
 
 /******** */
+
+/*****Librerias externas */
+import { FilterPipeModule } from 'ngx-filter-pipe';
+/******************** */
 
 import { LoginComponent } from './components/sesion/login/login.component';
 import { SesionComponent } from './components/sesion/sesion.component';
@@ -49,7 +53,9 @@ import { ListapacientesComponent } from './components/principal/listapacientes/l
     ButtonModule,
     SidebarModule,
     AvatarModule,
-    MenuModule
+    MenuModule,
+    FormsModule,
+    FilterPipeModule
   ],
   providers: [NavbarService],
   bootstrap: [AppComponent]

@@ -9,6 +9,7 @@ import { NavbarService } from 'src/app/services/navbar.service';
 })
 export class ListapacientesComponent implements OnInit {
   pacientes:Paciente[]=[];
+  filtro: any = { nombre: '' };
   constructor(private navbar:NavbarService) { }
 
   ngOnInit(): void {
