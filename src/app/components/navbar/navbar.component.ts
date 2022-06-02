@@ -8,6 +8,7 @@ import { NavbarService } from 'src/app/services/navbar.service';
 })
 export class NavbarComponent implements OnInit {
   titulo:string = "";
+  display:boolean=false;
   constructor(private navbar: NavbarService) { }
 
   ngOnInit(): void {

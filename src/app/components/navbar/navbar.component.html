@@ -1,11 +1,19 @@
+<p-sidebar [(visible)]="display" [baseZIndex]="10000">
+  <p-avatar label="L" shape="circle" size="xlarge" class="flex justify-content-center"></p-avatar>
+  <p-divider></p-divider>
+  <h3>Lissete López Hernández</h3>
+  <h3>Especialidad: Radiología</h3>
+  <p-divider></p-divider>
+</p-sidebar>
 <div class="grid navbar flex align-content-center flex-wrap ">
-    <div class="col-4 flex align-content-center flex-wrap">
-        <button pButton type="button" icon="pi pi-bars" class="p-button-rounded p-button-text p-button-lg text-white"></button>
-    </div>
-    <div class="col-4 text-center text-white">
-        <h2>{{titulo}} </h2>
-    </div>
-    <div class="col-4 flex justify-content-end flex-wrap">
-        <p class="align-items-center justify-content-center text-white">LOGO</p>
-    </div>
+  <div class="col-4 flex align-content-center flex-wrap">
+    <button pButton type="button" icon="pi pi-bars" class="p-button-rounded p-button-text p-button-lg text-white"
+      (click)="display = true"></button>
+  </div>
+  <div class="col-4 text-center text-white">
+    <h2>{{titulo}} </h2>
+  </div>
+  <div class="col-4 flex justify-content-end flex-wrap">
+    <p class="align-items-center justify-content-center text-white">LOGO</p>
+  </div>
 </div>

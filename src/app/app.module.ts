@@ -12,6 +12,10 @@ import {PasswordModule} from 'primeng/password';
 import {DividerModule} from 'primeng/divider';
 import {ButtonModule} from 'primeng/button';
 import {SidebarModule} from 'primeng/sidebar';
+import {AvatarModule} from 'primeng/avatar';
+import {MenuModule} from 'primeng/menu';
+import {MenuItem} from 'primeng/api';
+import {MegaMenuItem} from 'primeng/api';  //required when using MegaMenu
 /******** */
 
 import { LoginComponent } from './components/sesion/login/login.component';
@@ -20,6 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavbarService } from './services/navbar.service';
+import { SignosvitalesComponent } from './components/principal/signosvitales/signosvitales.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +32,8 @@ import { NavbarService } from './services/navbar.service';
     SesionComponent,
     FooterComponent,
     PrincipalComponent,
-    NavbarComponent
+    NavbarComponent,
+    SignosvitalesComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,9 @@ import { NavbarService } from './services/navbar.service';
     PasswordModule,
     DividerModule,
     ButtonModule,
-    SidebarModule
+    SidebarModule,
+    AvatarModule,
+    MenuModule
   ],
   providers: [NavbarService],
   bootstrap: [AppComponent]

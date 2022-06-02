@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("Fonts/RobotoFlex-Regular.ttf");
+}
+*{
+  font-family: Roboto-Regular;
+}
 app-root {
   display: block;
   height: 100vh;
