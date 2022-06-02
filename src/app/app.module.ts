@@ -24,6 +24,7 @@ import { PrincipalComponent } from './components/principal/principal.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavbarService } from './services/navbar.service';
 import { SignosvitalesComponent } from './components/principal/signosvitales/signosvitales.component';
+import { ErrorComponent } from './components/error/error.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { SignosvitalesComponent } from './components/principal/signosvitales/sig
     FooterComponent,
     PrincipalComponent,
     NavbarComponent,
-    SignosvitalesComponent
+    SignosvitalesComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
