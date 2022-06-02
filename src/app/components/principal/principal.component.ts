@@ -7,10 +7,12 @@ import { NavbarService } from 'src/app/services/navbar.service';
   styleUrls: ['./principal.component.css']
 })
 export class PrincipalComponent implements OnInit {
-  constructor(private navbar: NavbarService) { }
+  constructor(private navbar: NavbarService) { 
+    
+  }
 
   ngOnInit(): void {
-      this.navbar.cambiarTitulo("Signos Vitales");
+    this.navbar.titulo.emit("Página Principal");
   }
 
 }

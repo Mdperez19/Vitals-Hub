@@ -1,19 +1,12 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NavbarService {
-  private titulo:string = "";
+  
+  titulo = new EventEmitter<string>();
   constructor() { }
-
-  cambiarTitulo(titulo:string){
-    this.titulo = titulo;
-  }
-
-  getTitulo(){
-    return this.titulo;
-  }
 
   
 }

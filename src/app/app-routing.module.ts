@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PrincipalComponent } from './components/principal/principal.component';
+import { SignosvitalesComponent } from './components/principal/signosvitales/signosvitales.component';
 import { LoginComponent } from './components/sesion/login/login.component';
 import { SesionComponent } from './components/sesion/sesion.component';
 
 const routes: Routes = [
   {path:'',component:SesionComponent},
   {path:'Sesion',component:SesionComponent},
-  {path:'Principal',component:PrincipalComponent}
+  {path:'Principal',component:PrincipalComponent,children:[
+    {path:'SignosVitales',component:SignosvitalesComponent}
+  ]}
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavbarService } from 'src/app/services/navbar.service';
 
 @Component({
   selector: 'app-signosvitales',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignosvitalesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private navbar: NavbarService) { }
 
   ngOnInit(): void {
+    this.navbar.titulo.emit("Signos Vitales");
+    
   }
 
 }

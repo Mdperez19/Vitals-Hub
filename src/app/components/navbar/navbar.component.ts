@@ -14,10 +14,15 @@ export class NavbarComponent implements OnInit {
 
   items: MenuItem[]=[];
 
-  constructor(private navbar: NavbarService) { }
+  constructor(private navbar: NavbarService) {
+    this.navbar.titulo.subscribe(
+      (titulo:string)=>this.titulo=titulo
+    );
+
+   }
 
   ngOnInit(): void {
-    this.titulo=this.navbar.getTitulo();
+    
     this.items = [
       {label: 'Pacientes', icon: 'pi pi-fw pi-heart'},
       {label: 'Notificaciones', icon: 'pi pi-fw pi-bell'}
