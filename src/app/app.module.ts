@@ -14,7 +14,7 @@ import {ButtonModule} from 'primeng/button';
 import {SidebarModule} from 'primeng/sidebar';
 import {AvatarModule} from 'primeng/avatar';
 import {MenuModule} from 'primeng/menu';
-
+import {ImageModule} from 'primeng/image';
 /******** */
 
 /*****Librerias externas */
@@ -30,6 +30,7 @@ import { NavbarService } from './services/navbar.service';
 import { SignosvitalesComponent } from './components/principal/signosvitales/signosvitales.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ListapacientesComponent } from './components/principal/listapacientes/listapacientes.component';
+import { HistorialpacientesComponent } from './components/principal/historialpacientes/historialpacientes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { ListapacientesComponent } from './components/principal/listapacientes/l
     NavbarComponent,
     SignosvitalesComponent,
     ErrorComponent,
-    ListapacientesComponent
+    ListapacientesComponent,
+    HistorialpacientesComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ import { ListapacientesComponent } from './components/principal/listapacientes/l
     AvatarModule,
     MenuModule,
     FormsModule,
-    FilterPipeModule
+    FilterPipeModule,
+    ImageModule
   ],
   providers: [NavbarService],
   bootstrap: [AppComponent]

@@ -6,7 +6,7 @@
         </span>
     </div>
     <div *ngFor="let paciente of pacientes | filterBy: filtro" class="col-4 w-20rem">
-        <a href="#" class="no-underline w-15rem">
+        <a [routerLink]="['/Principal/Historial',paciente.nombre]" class="no-underline w-15rem">
             <p-card>
                 <p-avatar label="{{paciente.nombre[0]}}" shape="circle" size="xlarge" class="flex justify-content-center"></p-avatar>
                 <h3>Nombre: {{paciente.nombre}}</h3>
