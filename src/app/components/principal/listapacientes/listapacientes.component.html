@@ -1,0 +1,10 @@
+<div class="grid flex justify-content-center flex-wrap ">
+    <div *ngFor="let paciente of pacientes" class="col-4 w-20rem">
+        <a href="#" class="no-underline w-15rem">
+            <p-card>
+                <p-avatar label="{{paciente.nombre[0]}}" shape="circle" size="xlarge" class="flex justify-content-center"></p-avatar>
+                <h3>Nombre: {{paciente.nombre}}</h3>
+            </p-card>
+        </a>
+    </div>
+</div>
