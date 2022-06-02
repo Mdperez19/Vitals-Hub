@@ -9,8 +9,8 @@ export class Paciente {
     alergias:string[]=[];
     diagnostico:string="";
     telefono:string="";
-    nombre_familiar="";
-    telefono_familiar="";
+    nombre_familiar:string="";
+    telefono_familiar:string="";
 
 
   constructor(
@@ -22,7 +22,9 @@ export class Paciente {
     fecha_nacimiento: string, 
     alergias: string[], 
     diagnostico: string, 
-    telefono: string
+    telefono: string, 
+    nombre_familiar: string, 
+    telefono_familiar: string
 ) {
     this.nombre = nombre
     this.nss = nss
@@ -33,7 +35,12 @@ export class Paciente {
     this.alergias = alergias
     this.diagnostico = diagnostico
     this.telefono = telefono
+    this.nombre_familiar = nombre_familiar
+    this.telefono_familiar = telefono_familiar
   }
 
+    
+    
+	
     
 }
