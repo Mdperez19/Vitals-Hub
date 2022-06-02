@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavbarService } from 'src/app/services/navbar.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,6 +14,19 @@ export class LoginComponent implements OnInit {
   }
 
   iniciarSesion(){
-    this.router.navigate(['Principal']);
+    
+    Swal.fire({
+      title: 'Bienvenido!',
+      text: "Sesión iniciada",
+      icon: 'success',
+      confirmButtonText: 'Continuar!',
+      confirmButtonColor: '#0191B4'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.router.navigate(['Principal']);
+      }
+    });
+
+    
   }
 }
