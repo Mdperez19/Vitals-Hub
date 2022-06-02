@@ -14,8 +14,7 @@ import {ButtonModule} from 'primeng/button';
 import {SidebarModule} from 'primeng/sidebar';
 import {AvatarModule} from 'primeng/avatar';
 import {MenuModule} from 'primeng/menu';
-import {MenuItem} from 'primeng/api';
-import {MegaMenuItem} from 'primeng/api';  //required when using MegaMenu
+
 /******** */
 
 import { LoginComponent } from './components/sesion/login/login.component';
