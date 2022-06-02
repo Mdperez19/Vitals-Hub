@@ -1,5 +1,10 @@
 .navbar{
     background: rgb(11,7,66);
 
-    height: 9vh;
+    height: 11vh;
+}
+
+.pi{
+    font-size: 2rem;
+    color: white;
 }

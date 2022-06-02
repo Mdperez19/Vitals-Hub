@@ -3,6 +3,10 @@ app-root {
   display: block;
   height: 100vh;
 }
+app-principal{
+  display: block;
+  height: 100vh;
+}
 .p-card .p-card-body {
     padding: 1.25rem;
     box-shadow: -11px 10px 5px 0px rgba(11,7,66,0.3);

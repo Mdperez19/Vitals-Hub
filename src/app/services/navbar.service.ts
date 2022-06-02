@@ -4,11 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class NavbarService {
-  titulo:string = "";
+  private titulo:string = "";
   constructor() { }
 
   cambiarTitulo(titulo:string){
     this.titulo = titulo;
+  }
+
+  getTitulo(){
+    return this.titulo;
   }
 
   

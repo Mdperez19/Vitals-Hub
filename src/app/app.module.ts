@@ -11,6 +11,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {PasswordModule} from 'primeng/password';
 import {DividerModule} from 'primeng/divider';
 import {ButtonModule} from 'primeng/button';
+import {SidebarModule} from 'primeng/sidebar';
 /******** */
 
 import { LoginComponent } from './components/sesion/login/login.component';
@@ -36,7 +37,8 @@ import { NavbarService } from './services/navbar.service';
     InputTextModule,
     PasswordModule,
     DividerModule,
-    ButtonModule
+    ButtonModule,
+    SidebarModule
   ],
   providers: [NavbarService],
   bootstrap: [AppComponent]
