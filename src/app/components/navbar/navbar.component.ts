@@ -27,8 +27,8 @@ export class NavbarComponent implements OnInit {
       {label: 'Pacientes', icon: 'pi pi-fw pi-users',routerLink: 'Pacientes'},
       {label: 'Notificaciones', icon: 'pi pi-fw pi-bell'},
       {label: 'Agregar paciente', icon: 'pi pi-fw pi-user-plus',routerLink: 'Pacientes'},
-      {label: 'Agregar administrador', icon: 'pi pi-fw pi-star',routerLink: 'Pacientes'},
-      {label: 'Agregar médico', icon: 'pi pi-fw pi-heart',routerLink: 'Pacientes'}
+      {label: 'Agregar administrador', icon: 'pi pi-fw pi-star',routerLink: 'Agregaradmin'},
+      {label: 'Agregar médico', icon: 'pi pi-fw pi-heart',routerLink: 'Agregarmedico'}
   ];
   }
 

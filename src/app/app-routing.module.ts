@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './components/error/error.component';
+import { AgregarAdminComponent } from './components/principal/agregar-admin/agregar-admin.component';
+import { AgregarMedicoComponent } from './components/principal/agregar-medico/agregar-medico.component';
 import { HistorialpacientesComponent } from './components/principal/historialpacientes/historialpacientes.component';
 import { ListapacientesComponent } from './components/principal/listapacientes/listapacientes.component';
 import { PrincipalComponent } from './components/principal/principal.component';
@@ -14,7 +16,9 @@ const routes: Routes = [
   {path:'Principal',component:PrincipalComponent,children:[
     {path:'SignosVitales',component:SignosvitalesComponent},
     {path:'Pacientes',component:ListapacientesComponent},
-    {path:'Historial/:paciente',component:HistorialpacientesComponent}
+    {path:'Historial/:paciente',component:HistorialpacientesComponent},
+    {path:'Agregarmedico',component:AgregarMedicoComponent},
+    {path:'Agregaradmin',component:AgregarAdminComponent}
   ]},
   {path:'**',component:ErrorComponent}
 

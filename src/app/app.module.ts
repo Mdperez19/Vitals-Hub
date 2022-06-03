@@ -16,6 +16,7 @@ import {AvatarModule} from 'primeng/avatar';
 import {MenuModule} from 'primeng/menu';
 import {ImageModule} from 'primeng/image';
 import {AccordionModule} from 'primeng/accordion';
+import {CalendarModule} from 'primeng/calendar';
 /******** */
 
 /*****Librerias externas */
@@ -32,6 +33,8 @@ import { SignosvitalesComponent } from './components/principal/signosvitales/sig
 import { ErrorComponent } from './components/error/error.component';
 import { ListapacientesComponent } from './components/principal/listapacientes/listapacientes.component';
 import { HistorialpacientesComponent } from './components/principal/historialpacientes/historialpacientes.component';
+import { AgregarMedicoComponent } from './components/principal/agregar-medico/agregar-medico.component';
+import { AgregarAdminComponent } from './components/principal/agregar-admin/agregar-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +46,9 @@ import { HistorialpacientesComponent } from './components/principal/historialpac
     SignosvitalesComponent,
     ErrorComponent,
     ListapacientesComponent,
-    HistorialpacientesComponent
+    HistorialpacientesComponent,
+    AgregarMedicoComponent,
+    AgregarAdminComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +65,8 @@ import { HistorialpacientesComponent } from './components/principal/historialpac
     FormsModule,
     FilterPipeModule,
     ImageModule,
-    AccordionModule
+    AccordionModule,
+    CalendarModule
   ],
   providers: [NavbarService],
   bootstrap: [AppComponent]

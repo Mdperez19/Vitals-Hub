@@ -1,0 +1,21 @@
+<div class="grid flex justify-content-center">
+  <div class="col-12">
+    <h3 class="m-7">Ingresa los datos solicitados en los campos correspondientes
+    </h3>
+  </div>
+
+  <div class="col-12 flex align-items-center justify-content-center">
+    <p-card>
+      <ng-template pTemplate="header">
+        Información del médico
+      </ng-template>
+      Body Content
+      <ng-template pTemplate="footer">
+        Footer content here
+      </ng-template>
+    </p-card>
+    <p-calendar [(ngModel)]="dateValue" [numberOfMonths]="3"></p-calendar>
+  </div>
+
+
+</div>
