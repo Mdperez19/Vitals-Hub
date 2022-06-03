@@ -1,1 +1,37 @@
-<p>historialpacientes works!</p>
+<div class="grid flex align-content-center flex-wrap m-5">
+  <div class="grid col-12 flex justify-content-center flex-wrap">
+    <div class="col-6 flex justify-content-end flex-wrap">
+      <p-avatar [label]="paciente!.nombre[0]" shape="circle" size="xlarge" class="flex justify-content-center">
+      </p-avatar>
+
+    </div>
+    <div class="col-6">
+      <p><b>Nombre:</b> {{paciente?.nombre}}</p>
+      <p><b>Edad:</b> {{paciente?.edad}}</p>
+      <p><b>Sexo:</b> {{paciente?.sexo}}</p>
+      <p><b>NSS: </b>{{paciente?.nss}}</p>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <h2 class="titulos">Ficha de identificación</h2>
+    <p><b>Correo:</b> {{paciente?.correo}}</p>
+    <p><b>Telefono:</b> {{paciente?.telefono}}</p>
+    <p><b>Nombre del Familiar:</b> {{paciente?.nombre_familiar}}</p>
+    <p><b>Teléfono del Familiar:</b> {{paciente?.telefono_familiar}}</p>
+  </div>
+
+  <div class="col-12">
+    <h2 class="titulos">Antecedentes</h2>
+    <p-accordion>
+      <p-accordionTab header="Alergias">
+        <div *ngFor="let alergia of paciente?.alergias">
+          <p>{{alergia}}</p>
+        </div>
+      </p-accordionTab>
+
+
+    </p-accordion>
+  </div>
+
+</div>

@@ -15,6 +15,7 @@ import {SidebarModule} from 'primeng/sidebar';
 import {AvatarModule} from 'primeng/avatar';
 import {MenuModule} from 'primeng/menu';
 import {ImageModule} from 'primeng/image';
+import {AccordionModule} from 'primeng/accordion';
 /******** */
 
 /*****Librerias externas */
@@ -58,7 +59,8 @@ import { HistorialpacientesComponent } from './components/principal/historialpac
     MenuModule,
     FormsModule,
     FilterPipeModule,
-    ImageModule
+    ImageModule,
+    AccordionModule
   ],
   providers: [NavbarService],
   bootstrap: [AppComponent]
