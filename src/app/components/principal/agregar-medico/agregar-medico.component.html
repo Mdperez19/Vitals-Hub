@@ -1,11 +1,11 @@
-<div class="grid flex justify-content-center">
+<div class="grid">
   <div class="col-12">
-    <h3 class="m-7">Ingresa los datos solicitados en los campos correspondientes
+    <h3 class="m-7 flex justify-content-center">Ingresa los datos solicitados en los campos correspondientes
     </h3>
   </div>
 
-  <div class="col-12 flex align-items-center justify-content-center">
-    <p-card class="flex align-content-center" header="Información del médico">
+  <div class="col-12 flex justify-content-center">
+    <p-card class="grid" header="Información del médico"  [style]="{'width': '30rem', 'margin-bottom': '2em'}">
       <ng-template pTemplate="header">
         <img alt="Card" src="/assets/error.jpg">
       </ng-template>
@@ -22,36 +22,33 @@
             <input type="text" pInputText placeholder="Especialidad">
           </div>
         </div>
-        <div class="field grid">
+        <div class="field grid ">
           <div class="p-inputgroup">
             <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
             <input type="text" pInputText placeholder="Cédula profesional">
           </div>
         </div>
-        <div class="field grid">
+        <div class="field grid ">
           <div class="p-inputgroup">
             <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
             <p-calendar id="calendario" [(ngModel)]="dateValue" [numberOfMonths]="3" placeholder="Fecha de nacimiento"></p-calendar>
           </div>
         </div>
-        <div class="field grid">
-          <div class="p-inputgroup">
+        <div class="field grid ">
             <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-            <input type="text" pInputText placeholder="Teléfono celular">
-          </div>
+            <p-inputMask  placeholder="Teléfono celular" mask="(99)-99999999"></p-inputMask>
         </div>
-        <div class="field grid">
+        <div class="field grid ">
           <div class="p-inputgroup">
             <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
             <input type="text" pInputText placeholder="Correo">
-            <span class="p-inputgroup-addon">@gmail.com</span>
           </div>
         </div>
-        <div class="field grid">
+        <div class="field grid ">
             <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
             <p-password placeholder="Contraseña">
               <ng-template pTemplate="header">
-                  <h6>Pick a password</h6>
+                  <h5>Pick a password</h5>
               </ng-template>
               <ng-template pTemplate="footer">
                   <p-divider></p-divider>
@@ -67,7 +64,17 @@
         </div>
       </div>
       <ng-template pTemplate="footer">
-        Footer content here
+        <div  class="grid">
+          <div class="col-6 flex justify-content-center">
+            <p-button label="Guardar" icon="pi pi-check"></p-button>
+          </div>
+          <div class="col-6 flex justify-content-center">
+            <p-button label="Limpiar" icon="pi pi-times" styleClass="p-button-secondary" ></p-button>
+          </div>
+        </div>
+        
+        
+        
       </ng-template>
     </p-card>
 

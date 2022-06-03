@@ -17,6 +17,7 @@ import {MenuModule} from 'primeng/menu';
 import {ImageModule} from 'primeng/image';
 import {AccordionModule} from 'primeng/accordion';
 import {CalendarModule} from 'primeng/calendar';
+import {InputMaskModule} from 'primeng/inputmask';
 /******** */
 
 /*****Librerias externas */
@@ -66,7 +67,8 @@ import { AgregarAdminComponent } from './components/principal/agregar-admin/agre
     FilterPipeModule,
     ImageModule,
     AccordionModule,
-    CalendarModule
+    CalendarModule,
+    InputMaskModule
   ],
   providers: [NavbarService],
   bootstrap: [AppComponent]
