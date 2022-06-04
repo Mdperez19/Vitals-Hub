@@ -12,3 +12,10 @@ background: radial-gradient(circle, rgba(1,145,180,0.10688025210084029) 0%, rgba
   -webkit-box-shadow: -11px 10px 5px 0px rgba(11,7,66,0.3);
   -moz-box-shadow: -11px 10px 5px 0px rgba(11,7,66,0.3);
 }
+:host::ng-deep p-image img, img{
+  width: 100%;
+  height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+}

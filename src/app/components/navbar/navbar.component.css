@@ -8,3 +8,11 @@
     font-size: 2rem;
     color: white;
 }
+:host::ng-deep p-image img{
+    width: 50%;
+    height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+  }
+  
