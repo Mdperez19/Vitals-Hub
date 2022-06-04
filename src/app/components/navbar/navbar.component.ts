@@ -24,11 +24,11 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     
     this.items = [
-      {label: 'Pacientes', icon: 'pi pi-fw pi-users',routerLink: 'Pacientes'},
-      {label: 'Notificaciones', icon: 'pi pi-fw pi-bell', routerLink: 'Notificaciones'},
-      {label: 'Agregar paciente', icon: 'pi pi-fw pi-user-plus',routerLink: 'Pacientes'},
-      {label: 'Agregar administrador', icon: 'pi pi-fw pi-star',routerLink: 'Agregaradmin'},
-      {label: 'Agregar médico', icon: 'pi pi-fw pi-heart',routerLink: 'Agregarmedico'}
+      {label: 'Pacientes', icon: 'pi pi-fw pi-users',routerLink: 'Pacientes',command:(event)=>{this.display=false}},
+      {label: 'Notificaciones', icon: 'pi pi-fw pi-bell', routerLink: 'Notificaciones',command:(event)=>{this.display=false}},
+      {label: 'Agregar paciente', icon: 'pi pi-fw pi-user-plus',routerLink: 'Pacientes',command:(event)=>{this.display=false}},
+      {label: 'Agregar administrador', icon: 'pi pi-fw pi-star',routerLink: 'Agregaradmin',command:(event)=>{this.display=false}},
+      {label: 'Agregar médico', icon: 'pi pi-fw pi-heart',routerLink: 'Agregarmedico',command:(event)=>{this.display=false}}
   ];
   }
 

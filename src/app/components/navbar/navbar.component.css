@@ -9,10 +9,8 @@
     color: white;
 }
 :host::ng-deep p-image img{
-    width: 50%;
+    width: 30vh;
     height: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-  }
+    display: block;
+}
   
