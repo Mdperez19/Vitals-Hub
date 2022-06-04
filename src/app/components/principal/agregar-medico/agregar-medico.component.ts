@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MinLengthValidator } from '@angular/forms';
 import { NavbarService } from 'src/app/services/navbar.service';
 
 @Component({
@@ -8,10 +9,17 @@ import { NavbarService } from 'src/app/services/navbar.service';
 })
 export class AgregarMedicoComponent implements OnInit {
   dateValue:string="";
+
   constructor(private navbar:NavbarService) { }
 
   ngOnInit(): void {
     this.navbar.titulo.emit("Agregar médico");
+  }
+
+  getMinDate(){
+    let minDateValue:Date= new Date();
+    minDateValue.setFullYear(minDateValue.getFullYear()-18);
+    return minDateValue;
   }
 
 }

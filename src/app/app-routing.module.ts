@@ -5,6 +5,7 @@ import { AgregarAdminComponent } from './components/principal/agregar-admin/agre
 import { AgregarMedicoComponent } from './components/principal/agregar-medico/agregar-medico.component';
 import { HistorialpacientesComponent } from './components/principal/historialpacientes/historialpacientes.component';
 import { ListapacientesComponent } from './components/principal/listapacientes/listapacientes.component';
+import { NotificacionesComponent } from './components/principal/notificaciones/notificaciones.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { SignosvitalesComponent } from './components/principal/signosvitales/signosvitales.component';
 import { LoginComponent } from './components/sesion/login/login.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
     {path:'Pacientes',component:ListapacientesComponent},
     {path:'Historial/:paciente',component:HistorialpacientesComponent},
     {path:'Agregarmedico',component:AgregarMedicoComponent},
-    {path:'Agregaradmin',component:AgregarAdminComponent}
+    {path:'Agregaradmin',component:AgregarAdminComponent},
+    {path: 'Notificaciones',component:NotificacionesComponent}
   ]},
   {path:'**',component:ErrorComponent}
 
