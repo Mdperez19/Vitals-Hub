@@ -9,7 +9,7 @@ import { NavbarService } from 'src/app/services/navbar.service';
 })
 export class AgregarMedicoComponent implements OnInit {
   dateValue:string="";
-
+  default:Date=new Date("04/06/1960");
   constructor(private navbar:NavbarService) { }
 
   ngOnInit(): void {
