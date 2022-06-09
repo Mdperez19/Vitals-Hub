@@ -6,9 +6,9 @@ import { Paciente } from '../models/paciente.model';
 })
 export class PacientesService {
   pacientes:Paciente[]=[
-    new Paciente("Liss","51515",21,"aaa@aaa.com","Femenino","5 marzo 2001",["a la tarea xd","a la escuela"],"muy wapa","555555","Nacho","55555"),
-    new Paciente("Dani","51515",21,"aaa@bbb.com","Masculino","3 abril 2001",["a la tarea x2 xd"],"el mas flojo del equipo","555555","familiar1","55555"),
-    new Paciente("Beto","51515",21,"aaa@ccc.com","Masculino","13 septiembre 1999",["a la tarea x3 xd"],"muy wapo","555555","familiar2","88545")
+    new Paciente("Lissete López","15369728649",21,"llopezh1600@alumno.ipn.mx","Femenino","5 marzo 2001",["Negadas"],"muy wapa","5567470956","Ignacio López","5527560956"),
+    new Paciente("Daniel Pérez","53241581154",21,"mperezp1603@alumno.ipn.mx","Masculino","3 abril 2001",["Negadas"],"el mas flojo del equipo","5540596328","Mario Pérez","5592440956"),
+    new Paciente("Alberto Palacios","13654697821",22,"apalaciosc1601@alumno.ipn.mx","Masculino","13 septiembre 1999",["Negadas"],"muy wapo","5589564720","Martín Palacios","5533640956")
   ];
 
   constructor() { }
