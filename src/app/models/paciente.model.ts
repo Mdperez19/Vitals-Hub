@@ -6,11 +6,19 @@ export class Paciente {
     correo:string="";
     sexo:string="";
     fecha_nacimiento:string="";
-    alergias:string[]=[];
-    diagnostico:string="";
     telefono:string="";
     nombre_familiar:string="";
     telefono_familiar:string="";
+
+    
+    diagnostico:string="";
+    antecedentes_heredofamiliares:string[]=[];
+    antecedentes_nopatologicos:string[]=[];
+    antecedentes_patologicos:string[]=[];
+    fecha_ingreso:string="";
+    grupo_sanguineo:string="";
+    num_cama:number=0;
+    
 
 
   constructor(
@@ -20,11 +28,16 @@ export class Paciente {
     correo: string, 
     sexo: string, 
     fecha_nacimiento: string, 
-    alergias: string[], 
-    diagnostico: string, 
     telefono: string, 
     nombre_familiar: string, 
-    telefono_familiar: string
+    telefono_familiar: string, 
+    diagnostico: string, 
+    antecedentes_heredofamiliares: string[], 
+    antecedentes_nopatologicos: string[], 
+    antecedentes_patologicos: string[], 
+    fecha_ingreso: string, 
+    grupo_sanguineo: string, 
+    num_cama: number
 ) {
     this.nombre = nombre
     this.nss = nss
@@ -32,12 +45,19 @@ export class Paciente {
     this.correo = correo
     this.sexo = sexo
     this.fecha_nacimiento = fecha_nacimiento
-    this.alergias = alergias
-    this.diagnostico = diagnostico
     this.telefono = telefono
     this.nombre_familiar = nombre_familiar
     this.telefono_familiar = telefono_familiar
+    this.diagnostico = diagnostico
+    this.antecedentes_heredofamiliares = antecedentes_heredofamiliares
+    this.antecedentes_nopatologicos = antecedentes_nopatologicos
+    this.antecedentes_patologicos = antecedentes_patologicos
+    this.fecha_ingreso = fecha_ingreso
+    this.grupo_sanguineo = grupo_sanguineo
+    this.num_cama = num_cama
   }
+  
+
 
     
     

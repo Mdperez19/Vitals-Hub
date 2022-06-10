@@ -24,14 +24,35 @@
   <div class="col-12">
     <h2 class="titulos">Antecedentes</h2>
     <p-accordion>
-      <p-accordionTab header="Alergias">
-        <div *ngFor="let alergia of paciente?.alergias">
+      <p-accordionTab header="Heredo familiares">
+        <div *ngFor="let alergia of paciente?.antecedentes_heredofamiliares">
           <p>{{alergia}}</p>
         </div>
       </p-accordionTab>
+    </p-accordion>
+
+    <p-accordion>
+      <p-accordionTab header="No patológicos">
+        <div *ngFor="let alergia of paciente?.antecedentes_nopatologicos">
+          <p>{{alergia}}</p>
+        </div>
+      </p-accordionTab>
+    </p-accordion>
 
 
+    <p-accordion>
+      <p-accordionTab header="Patológicos">
+        <div *ngFor="let alergia of paciente?.antecedentes_patologicos">
+          <p>{{alergia}}</p>
+        </div>
+      </p-accordionTab>
     </p-accordion>
   </div>
-
+  <div class="col-12">
+    <h2 class="titulos">Hospital</h2>
+    <p><b>Diagnóstico:</b> {{paciente?.diagnostico}}</p>
+    <p><b>Fecha de ingreso:</b> {{paciente?.fecha_ingreso}}</p>
+    <p><b>Grupo sanguíneo:</b> {{paciente?.grupo_sanguineo}}</p>
+    <p><b>Número de cama: </b>{{paciente?.num_cama}}</p>
+  </div>
 </div>
