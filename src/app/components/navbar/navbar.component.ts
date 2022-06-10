@@ -31,5 +31,8 @@ export class NavbarComponent implements OnInit {
       {label: 'Agregar médico', icon: 'pi pi-fw pi-heart',routerLink: 'Agregarmedico',command:(event)=>{this.display=false}}
   ];
   }
+  regresar(){
+    this.navbar.titulo.emit("Principal");
+  }
 
 }

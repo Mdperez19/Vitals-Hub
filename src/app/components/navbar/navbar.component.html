@@ -16,6 +16,6 @@
     <h2 [textContent]="titulo"></h2>
   </div>
   <div class="col-4 flex justify-content-end flex-wrap">
-    <p-image src="assets\VitalsHub4.png" alt="Image"></p-image>
+    <a [routerLink]="['/Principal/']" (click)="regresar()"><p-image src="assets\VitalsHub4.png" alt="Image"></p-image></a>
   </div>
 </div>
