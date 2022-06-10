@@ -14,6 +14,9 @@ export class PacientesService {
 
   constructor() { }
 
+  agregarPaciente(paciente:Paciente){
+    this.pacientes.push(paciente);
+  }
   getPacientes(){
     return this.pacientes;
   }

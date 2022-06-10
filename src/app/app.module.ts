@@ -18,6 +18,7 @@ import {ImageModule} from 'primeng/image';
 import {AccordionModule} from 'primeng/accordion';
 import {CalendarModule} from 'primeng/calendar';
 import {InputMaskModule} from 'primeng/inputmask';
+import {ChipsModule} from 'primeng/chips';
 /******** */
 
 /*****Librerias externas */
@@ -38,6 +39,7 @@ import { AgregarMedicoComponent } from './components/principal/agregar-medico/ag
 import { AgregarAdminComponent } from './components/principal/agregar-admin/agregar-admin.component';
 import { NotificacionesComponent } from './components/principal/notificaciones/notificaciones.component';
 import { EliminarAdminComponent } from './components/principal/eliminar-admin/eliminar-admin.component';
+import { AgregarPacienteComponent } from './components/principal/agregar-paciente/agregar-paciente.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +55,8 @@ import { EliminarAdminComponent } from './components/principal/eliminar-admin/el
     AgregarMedicoComponent,
     AgregarAdminComponent,
     NotificacionesComponent,
-    EliminarAdminComponent
+    EliminarAdminComponent,
+    AgregarPacienteComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +75,8 @@ import { EliminarAdminComponent } from './components/principal/eliminar-admin/el
     ImageModule,
     AccordionModule,
     CalendarModule,
-    InputMaskModule
+    InputMaskModule,
+    ChipsModule
   ],
   providers: [NavbarService],
   bootstrap: [AppComponent]
