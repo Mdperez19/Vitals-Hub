@@ -1,3 +1,9 @@
 p-chips.p-element.p-inputwrapper{
     width: 89%;
 }
+:host::ng-deep .p-card .p-card-body {
+    padding: 1.25rem;
+    box-shadow: -11px 10px 5px 0px rgba(11,7,66,0.3);
+  -webkit-box-shadow: -11px 10px 5px 0px rgba(11,7,66,0.3);
+  -moz-box-shadow: -11px 10px 5px 0px rgba(11,7,66,0.3);
+}

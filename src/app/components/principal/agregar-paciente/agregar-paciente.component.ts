@@ -3,6 +3,7 @@ import { Paciente } from 'src/app/models/paciente.model';
 import { NavbarService } from 'src/app/services/navbar.service';
 import { PacientesService } from 'src/app/services/pacientes.service';
 import {NgForm} from '@angular/forms';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-agregar-paciente',
   templateUrl: './agregar-paciente.component.html',
@@ -37,8 +38,20 @@ export class AgregarPacienteComponent implements OnInit {
   onSubmit(f: NgForm) {
     console.log(f.value);  // { first: '', last: '' }
     console.log(f.valid);  // false
-    this.pacienteService.agregarPaciente(f.value);
-    f.resetForm();
+
+    Swal.fire({
+      title: 'Agregado',
+      text: "Paciente agregado",
+      icon: 'success',
+      confirmButtonText: 'Continuar!',
+      confirmButtonColor: '#0191B4'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.pacienteService.agregarPaciente(f.value);
+        f.resetForm();
+      }
+    });
+    
   }
 
 }
