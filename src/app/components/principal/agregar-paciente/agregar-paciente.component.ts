@@ -34,13 +34,10 @@ export class AgregarPacienteComponent implements OnInit {
     this.navbar.titulo.emit("Agregar paciente");
   }
 
-  agregar(){
-    
-    this.pacienteService.agregarPaciente(new Paciente(this.nombre,this.nss,this.edad,this.correo,this.sexo,this.fecha_nacimiento,this.telefono,this.nombre_familiar,this.telefono_familiar,this.diagnostico,this.antecedentes_heredofamiliares,this.antecedentes_nopatologicos,this.antecedentes_patologicos,this.fecha_ingreso,this.grupo_sanguineo,this.num_cama));
-  }
   onSubmit(f: NgForm) {
     console.log(f.value);  // { first: '', last: '' }
     console.log(f.valid);  // false
+    this.pacienteService.agregarPaciente(f.value);
     f.resetForm();
   }
 
