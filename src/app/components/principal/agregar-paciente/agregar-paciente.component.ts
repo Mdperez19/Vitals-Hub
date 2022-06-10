@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Paciente } from 'src/app/models/paciente.model';
 import { NavbarService } from 'src/app/services/navbar.service';
 import { PacientesService } from 'src/app/services/pacientes.service';
-
+import {NgForm} from '@angular/forms';
 @Component({
   selector: 'app-agregar-paciente',
   templateUrl: './agregar-paciente.component.html',
@@ -37,6 +37,11 @@ export class AgregarPacienteComponent implements OnInit {
   agregar(){
     
     this.pacienteService.agregarPaciente(new Paciente(this.nombre,this.nss,this.edad,this.correo,this.sexo,this.fecha_nacimiento,this.telefono,this.nombre_familiar,this.telefono_familiar,this.diagnostico,this.antecedentes_heredofamiliares,this.antecedentes_nopatologicos,this.antecedentes_patologicos,this.fecha_ingreso,this.grupo_sanguineo,this.num_cama));
+  }
+  onSubmit(f: NgForm) {
+    console.log(f.value);  // { first: '', last: '' }
+    console.log(f.valid);  // false
+    f.resetForm();
   }
 
 }
