@@ -37,6 +37,7 @@ import { HistorialpacientesComponent } from './components/principal/historialpac
 import { AgregarMedicoComponent } from './components/principal/agregar-medico/agregar-medico.component';
 import { AgregarAdminComponent } from './components/principal/agregar-admin/agregar-admin.component';
 import { NotificacionesComponent } from './components/principal/notificaciones/notificaciones.component';
+import { EliminarAdminComponent } from './components/principal/eliminar-admin/eliminar-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { NotificacionesComponent } from './components/principal/notificaciones/n
     HistorialpacientesComponent,
     AgregarMedicoComponent,
     AgregarAdminComponent,
-    NotificacionesComponent
+    NotificacionesComponent,
+    EliminarAdminComponent
   ],
   imports: [
     BrowserModule,
