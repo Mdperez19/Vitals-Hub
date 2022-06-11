@@ -3,14 +3,31 @@
         <span class="p-input-icon-left">
             <i class="pi pi-search"></i>
             <input type="text" pInputText placeholder="Buscar paciente" class="p-inputtext-lg" [(ngModel)]="filtro.nombre" />
-        </span>
+        </span>     
+    </div>
+    <div class="col-12 flex justify-content-center flex-wrap">
+        <h2 *ngIf="operacion=='Eliminar'">Selecciona paciente a eliminar</h2>
     </div>
     <div *ngFor="let paciente of pacientes | filterBy: filtro" class="col-4 w-20rem">
-        <a [routerLink]="['/Principal/Historial',paciente.nombre]" class="no-underline w-15rem">
-            <p-card>
-                <p-avatar label="{{paciente.nombre[0]}}" shape="circle" size="xlarge" class="flex justify-content-center"></p-avatar>
-                <h3>Nombre: {{paciente.nombre}}</h3>
-            </p-card>
-        </a>
+
+        <ng-container *ngIf="operacion=='Lista'; else eliminar">
+            <a  [routerLink]="['/Principal/Historial',paciente.nombre]" class="no-underline w-15rem">
+                <p-card>
+                    <p-avatar label="{{paciente.nombre[0]}}" shape="circle" size="xlarge" class="flex justify-content-center"></p-avatar>
+                    <h3>Nombre: {{paciente.nombre}}</h3>
+                </p-card>
+            </a>
+        </ng-container>
+        <ng-template #eliminar>
+            <ng-container *ngIf="operacion=='Eliminar'">
+                <p-button  styleClass="p-button-text" (onClick)="eliminarPaciente(paciente)">
+                    <p-card>
+                        <p-avatar label="{{paciente.nombre[0]}}" shape="circle" size="xlarge" class="flex justify-content-center"></p-avatar>
+                        <h3>Nombre: {{paciente.nombre}}</h3>
+                    </p-card>
+                </p-button>
+            </ng-container>
+        </ng-template>
+        
     </div>
 </div>

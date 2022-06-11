@@ -26,4 +26,8 @@ export class PacientesService {
        paciente  => paciente.nombre===nombre
     );
   }
+
+  eliminarPaciente(index:number){
+    this.pacientes.splice(index,1);
+  }
 }

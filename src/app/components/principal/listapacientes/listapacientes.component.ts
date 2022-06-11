@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Paciente } from 'src/app/models/paciente.model';
 import { NavbarService } from 'src/app/services/navbar.service';
 import { PacientesService } from 'src/app/services/pacientes.service';
@@ -9,7 +9,9 @@ import { PacientesService } from 'src/app/services/pacientes.service';
   styleUrls: ['./listapacientes.component.css']
 })
 export class ListapacientesComponent implements OnInit {
+  @Input() operacion:string="Lista";
   pacientes:Paciente[]=[];
+  
   filtro: any = { nombre: '' };
   constructor(private navbar:NavbarService,private datos:PacientesService) { }
 
@@ -18,4 +20,8 @@ export class ListapacientesComponent implements OnInit {
     this.pacientes=this.datos.getPacientes();
   }
 
+  eliminarPaciente(paciente:Paciente){
+    let index = this.pacientes.indexOf(paciente);
+    this.datos.eliminarPaciente(index);
+  }
 }
