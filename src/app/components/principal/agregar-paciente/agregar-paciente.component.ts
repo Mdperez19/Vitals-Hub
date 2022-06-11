@@ -15,7 +15,7 @@ export class AgregarPacienteComponent implements OnInit {
     edad:number=0;
     correo:string="";
     sexo:string="";
-    fecha_nacimiento:string="";
+    fecha_nacimiento:Date|undefined;
     telefono:string="";
     nombre_familiar:string="";
     telefono_familiar:string="";
@@ -25,7 +25,7 @@ export class AgregarPacienteComponent implements OnInit {
     antecedentes_heredofamiliares:string[]=[];
     antecedentes_nopatologicos:string[]=[];
     antecedentes_patologicos:string[]=[];
-    fecha_ingreso:string="";
+    fecha_ingreso:Date|undefined;
     grupo_sanguineo:string="";
     num_cama:number=0;
 
@@ -47,6 +47,9 @@ export class AgregarPacienteComponent implements OnInit {
       confirmButtonColor: '#0191B4'
     }).then((result) => {
       if (result.isConfirmed) {
+        var options = { year: 'numeric', month: 'long', day: 'numeric' };
+        f.value.fecha_ingreso=f.value.fecha_ingreso.toLocaleDateString("es-ES",options);
+        f.value.fecha_nacimiento=f.value.fecha_nacimiento.toLocaleDateString("es-ES",options);
         this.pacienteService.agregarPaciente(f.value);
         f.resetForm();
       }

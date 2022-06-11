@@ -42,7 +42,7 @@
           <div class="p-inputgroup">
             <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
             <p-calendar id="calendario" [numberOfMonths]="3" placeholder="Fecha de nacimiento"
-              [(ngModel)]="fecha_nacimiento" name="nacimiento"></p-calendar>
+              [(ngModel)]="fecha_nacimiento" name="fecha_nacimiento" dateFormat="d MM yy"></p-calendar>
           </div>
         </div>
         <div class="field grid ">
@@ -92,7 +92,7 @@
           <div class="p-inputgroup">
             <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
             <p-calendar id="calendario" [numberOfMonths]="3" name="fecha_ingreso" placeholder="Fecha de ingreso"
-              [(ngModel)]="fecha_ingreso"></p-calendar>
+              [(ngModel)]="fecha_ingreso" dateFormat="d MM yy"></p-calendar>
           </div>
         </div>
 
