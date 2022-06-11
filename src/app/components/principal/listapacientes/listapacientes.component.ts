@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Paciente } from 'src/app/models/paciente.model';
 import { NavbarService } from 'src/app/services/navbar.service';
 import { PacientesService } from 'src/app/services/pacientes.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-listapacientes',
@@ -22,6 +23,19 @@ export class ListapacientesComponent implements OnInit {
 
   eliminarPaciente(paciente:Paciente){
     let index = this.pacientes.indexOf(paciente);
-    this.datos.eliminarPaciente(index);
+    Swal.fire({
+      title: 'Eliminar',
+      text: `Desea eliminar al paciente ${paciente.nombre}?`,
+      icon: 'question',
+      showDenyButton: true,
+      confirmButtonText: 'Eliminar',
+      confirmButtonColor: '#0191B4',
+      denyButtonText: `Cancelar`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.datos.eliminarPaciente(index);
+      }
+    });
+    
   }
 }
