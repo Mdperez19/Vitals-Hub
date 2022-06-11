@@ -33,7 +33,7 @@ export class NavbarComponent implements OnInit {
   ];
   }
   regresar(){
-    this.navbar.titulo.emit("Principal");
+    this.navbar.titulo.emit("Página Principal");
   }
 
 }
