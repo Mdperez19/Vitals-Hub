@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Paciente } from 'src/app/models/paciente.model';
 import { NavbarService } from 'src/app/services/navbar.service';
+import { PacientesService } from 'src/app/services/pacientes.service';
 @Component({
     selector: 'app-paciente',
     templateUrl: './paciente.component.html',
@@ -11,12 +14,21 @@ export class PacienteComponent implements OnInit {
     data3: any;
     chartOptions: any;
     basicOptions: any;
-    temperatura = 36;
-    spO2 = 96;
-    ppm = 80;
-    constructor(private navbar: NavbarService) { }
+    
+    paciente: Paciente | undefined;
+    nombre: string = "";
+    temperatura:number = 0;
+    spO2:number = 0;
+    ppm:number = 0;   
+    constructor(private navbar: NavbarService, private rutaActiva: ActivatedRoute, private datos: PacientesService) { }
 
-    ngOnInit() {
+    ngOnInit() {    
+        this.paciente = this.datos?.getPaciente(this.rutaActiva.snapshot.params.paciente);
+        this.nombre = this.paciente?.nombre!;
+        this.temperatura = this.paciente?.temperatura!;
+        this.spO2 = this.paciente?.spO2!;
+        this.ppm = this.paciente?.ppm!;
+
         this.navbar.titulo.emit("Signos Vitales"); 
         this.data = {
             datasets: [{

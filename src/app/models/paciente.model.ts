@@ -19,6 +19,9 @@ export class Paciente {
     grupo_sanguineo:string="";
     num_cama:number=0;
     
+    temperatura:number=0;
+    spO2:number=0;
+    ppm:number=0;
 
 
   constructor(

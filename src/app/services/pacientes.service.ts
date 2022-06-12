@@ -12,7 +12,19 @@ export class PacientesService {
     new Paciente("Alberto Palacios","13654697821",22,"apalaciosc1601@alumno.ipn.mx","Masculino","13 septiembre 1999","5532165789","Juan","5532465681","Sana",["Ninguna"],["Ninguna"],["Ninguna"],"9 junio 2022","O-",3)
   ];
 
-  constructor() { }
+  constructor() {
+    this.pacientes[0].temperatura=36;
+    this.pacientes[0].spO2=96;
+    this.pacientes[0].ppm=80;
+
+    this.pacientes[1].temperatura=35.5;
+    this.pacientes[1].spO2=95;
+    this.pacientes[1].ppm=85;
+
+    this.pacientes[2].temperatura=37;
+    this.pacientes[2].spO2=98;
+    this.pacientes[2].ppm=89;
+   }
 
   agregarPaciente(paciente:Paciente){
     this.pacientes.push(paciente);
