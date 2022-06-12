@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Paciente } from 'src/app/models/paciente.model';
 import { NavbarService } from 'src/app/services/navbar.service';
+import { PacientesService } from 'src/app/services/pacientes.service';
 
 @Component({
   selector: 'app-signosvitales',
@@ -7,12 +10,14 @@ import { NavbarService } from 'src/app/services/navbar.service';
   styleUrls: ['./signosvitales.component.css']
 })
 export class SignosvitalesComponent implements OnInit {
-
-  constructor(private navbar: NavbarService) { }
+  paciente:Paciente|undefined;
+  
+  operacion:string="Signos";
+  constructor(private navbar: NavbarService,private rutaActiva: ActivatedRoute,private datos: PacientesService) { }
 
   ngOnInit(): void {
     this.navbar.titulo.emit("Signos Vitales");
-    
+    this.paciente= this.datos?.getPaciente(this.rutaActiva.snapshot.params.paciente);
   }
 
 }

@@ -17,6 +17,7 @@ import { PrincipalComponent } from './components/principal/principal.component';
 import { SignosvitalesComponent } from './components/principal/signosvitales/signosvitales.component';
 import { LoginComponent } from './components/sesion/login/login.component';
 import { SesionComponent } from './components/sesion/sesion.component';
+import { PacienteComponent as PacienteSignos} from './components/principal/signosvitales/paciente/paciente.component';
 
 const routes: Routes = [
   {path:'',component:SesionComponent},
@@ -36,6 +37,7 @@ const routes: Routes = [
     {path: 'ModificarAdmin',component:ModificarAdminComponent},
     {path: 'ModificarAdmin/:administrador',component:AdministradorComponent},
     {path: 'SignosVitales',component:SignosvitalesComponent},
+    {path: 'SignosVitales/:paciente',component:PacienteSignos}
   ]},
   {path:'**',component:ErrorComponent}
 
