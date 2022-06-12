@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Paciente } from 'src/app/models/paciente.model';
 import { NavbarService } from 'src/app/services/navbar.service';
 import { PacientesService } from 'src/app/services/pacientes.service';
@@ -33,7 +33,7 @@ export class PacienteComponent implements OnInit {
   grupo_sanguineo: string = "";
   num_cama: number = 0;
 
-  constructor(private navbar: NavbarService, private rutaActiva: ActivatedRoute, private datos: PacientesService) { }
+  constructor(private navbar: NavbarService, private rutaActiva: ActivatedRoute, private datos: PacientesService, private router: Router) { }
 
 
   ngOnInit(): void {
@@ -75,6 +75,7 @@ export class PacienteComponent implements OnInit {
         f.value.fecha_nacimiento = f.value.fecha_nacimiento.toLocaleDateString("es-ES", options);
         this.datos.modificarPaciente(f.value);
         f.resetForm();
+        this.router.navigate(['Principal/Pacientes']);
       }
     });
 
