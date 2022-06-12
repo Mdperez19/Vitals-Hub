@@ -29,24 +29,21 @@
           <p>{{alergia}}</p>
         </div>
       </p-accordionTab>
-    </p-accordion>
-
-    <p-accordion>
       <p-accordionTab header="No patológicos">
         <div *ngFor="let alergia of paciente?.antecedentes_nopatologicos">
           <p>{{alergia}}</p>
         </div>
       </p-accordionTab>
-    </p-accordion>
-
-
-    <p-accordion>
       <p-accordionTab header="Patológicos">
         <div *ngFor="let alergia of paciente?.antecedentes_patologicos">
           <p>{{alergia}}</p>
         </div>
       </p-accordionTab>
     </p-accordion>
+
+
+
+
   </div>
   <div class="col-12">
     <h2 class="titulos">Hospital</h2>
