@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavbarService } from 'src/app/services/navbar.service';
 
 @Component({
   selector: 'app-eliminar-admin',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./eliminar-admin.component.css']
 })
 export class EliminarAdminComponent implements OnInit {
-
-  constructor() { }
+  operacion:string="Eliminar";
+  constructor(private navbar:NavbarService) { }
 
   ngOnInit(): void {
+    this.navbar.titulo.emit("Eliminar Administrador");
   }
 
 }

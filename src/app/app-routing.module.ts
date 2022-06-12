@@ -4,6 +4,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { AgregarAdminComponent } from './components/principal/agregar-admin/agregar-admin.component';
 import { AgregarMedicoComponent } from './components/principal/agregar-medico/agregar-medico.component';
 import { AgregarPacienteComponent } from './components/principal/agregar-paciente/agregar-paciente.component';
+import { EliminarAdminComponent } from './components/principal/eliminar-admin/eliminar-admin.component';
 import { EliminarPacienteComponent } from './components/principal/eliminar-paciente/eliminar-paciente.component';
 import { HistorialpacientesComponent } from './components/principal/historialpacientes/historialpacientes.component';
 import { ListapacientesComponent } from './components/principal/listapacientes/listapacientes.component';
@@ -28,7 +29,8 @@ const routes: Routes = [
     {path: 'Notificaciones',component:NotificacionesComponent},
     {path: 'EliminarPaciente',component:EliminarPacienteComponent},
     {path: 'ModificarPaciente',component:ModificarPacienteComponent},
-    {path: 'ModificarPaciente/:paciente',component:PacienteComponent}
+    {path: 'ModificarPaciente/:paciente',component:PacienteComponent},
+    {path: 'EliminarAdmin',component:EliminarAdminComponent}
   ]},
   {path:'**',component:ErrorComponent}
 

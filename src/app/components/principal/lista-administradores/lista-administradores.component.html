@@ -1,0 +1,44 @@
+<div class="grid flex justify-content-center flex-wrap ">
+    <div id="buscar" class="col-12 flex justify-content-center flex-wrap">
+        <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText placeholder="Buscar administrador" class="p-inputtext-lg" [(ngModel)]="filtro.nombre" />
+        </span>     
+    </div>
+    <div class="col-12 flex justify-content-center flex-wrap">
+        <h2 *ngIf="operacion=='Eliminar'">Selecciona administrador a eliminar</h2>
+        <h2 *ngIf="operacion=='Modificar'">Selecciona administrador a modificar</h2>
+    </div>
+    <div *ngFor="let administrador of administradores | filterBy: filtro" class="col-4 w-20rem">
+
+        <ng-container *ngIf="operacion=='Lista'; else eliminar">
+            <a  [routerLink]="['/Principal/Historial',administrador.nombre]" class="no-underline w-15rem">
+                <p-card>
+                    <p-avatar label="{{administrador.nombre[0]}}" shape="circle" size="xlarge" class="flex justify-content-center"></p-avatar>
+                    <h3>Nombre: {{administrador.nombre}}</h3>
+                </p-card>
+            </a>
+        </ng-container>
+        <ng-template #eliminar>
+            <ng-container *ngIf="operacion=='Eliminar';else modificar">
+                <p-button  styleClass="p-button-text" (onClick)="eliminarPaciente(administrador)">
+                    <p-card>
+                        <p-avatar label="{{administrador.nombre[0]}}" shape="circle" size="xlarge" class="flex justify-content-center"></p-avatar>
+                        <h3>Nombre: {{administrador.nombre}}</h3>
+                    </p-card>
+                </p-button>
+            </ng-container>
+        </ng-template>
+        <ng-template #modificar>
+            <ng-container *ngIf="operacion=='Modificar'">
+                <a [routerLink]="['/Principal/ModificarPaciente',administrador.nombre]" class="no-underline w-15rem">
+                    <p-card>
+                        <p-avatar label="{{administrador.nombre[0]}}" shape="circle" size="xlarge" class="flex justify-content-center"></p-avatar>
+                        <h3>Nombre: {{administrador.nombre}}</h3>
+                    </p-card>
+                </a>
+            </ng-container>
+        </ng-template>
+        
+    </div>
+</div>

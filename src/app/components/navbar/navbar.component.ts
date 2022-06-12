@@ -30,6 +30,7 @@ export class NavbarComponent implements OnInit {
       {label: 'Eliminar paciente', icon: 'pi pi-fw pi-times',routerLink: 'EliminarPaciente',command:(event)=>{this.display=false}},
       {label: 'Modificar paciente', icon: 'pi pi-fw pi-save',routerLink: 'ModificarPaciente',command:(event)=>{this.display=false}},
       {label: 'Agregar administrador', icon: 'pi pi-fw pi-star',routerLink: 'Agregaradmin',command:(event)=>{this.display=false}},
+      {label: 'Eliminar administrador', icon: 'pi pi-fw pi-times',routerLink: 'EliminarAdmin',command:(event)=>{this.display=false}},
       {label: 'Agregar médico', icon: 'pi pi-fw pi-heart',routerLink: 'Agregarmedico',command:(event)=>{this.display=false}}
   ];
   }

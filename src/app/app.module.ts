@@ -43,6 +43,7 @@ import { AgregarPacienteComponent } from './components/principal/agregar-pacient
 import { EliminarPacienteComponent } from './components/principal/eliminar-paciente/eliminar-paciente.component';
 import { ModificarPacienteComponent } from './components/principal/modificar-paciente/modificar-paciente.component';
 import { PacienteComponent } from './components/principal/modificar-paciente/paciente/paciente.component';
+import { ListaAdministradoresComponent } from './components/principal/lista-administradores/lista-administradores.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +63,8 @@ import { PacienteComponent } from './components/principal/modificar-paciente/pac
     AgregarPacienteComponent,
     EliminarPacienteComponent,
     ModificarPacienteComponent,
-    PacienteComponent
+    PacienteComponent,
+    ListaAdministradoresComponent
   ],
   imports: [
     BrowserModule,
