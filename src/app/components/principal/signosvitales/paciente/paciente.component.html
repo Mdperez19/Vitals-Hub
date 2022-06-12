@@ -1,1 +1,23 @@
-<p>paciente works!</p>
+<div class="grid flex justify-content-center flex-wrap ">
+    <div class="col-12 flex justify-content-center flex-wrap">
+        <h1>Signos Vitales</h1>    
+    </div>
+
+    <div class="sm:col-12 md:col-12 lg:col-4 flex justify-content-center flex-wrap">
+        <p-card header="Temperatura: {{temperatura}}°">
+            <p-chart type="doughnut" [data]="data" [options]="chartOptions" height="50vh"></p-chart>
+        </p-card>   
+    </div>
+
+    <div class="sm:col-12 md:col-12 lg:col-4 flex justify-content-center flex-wrap">
+        <p-card header="SpO2: {{spO2}}%">
+            <p-chart type="doughnut" [data]="data2" [options]="chartOptions" height="50vh"></p-chart>
+        </p-card>   
+    </div>
+
+    <div class="sm:col-12 md:col-12 lg:col-4 flex justify-content-center flex-wrap">
+        <p-card header="Ritmo cardíaco: {{ppm}} PPM">
+            <p-chart type="bar" [data]="data3" [options]="basicOptions" height="50vh"></p-chart>
+        </p-card>   
+    </div>
+</div>

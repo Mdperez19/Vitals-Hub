@@ -45,6 +45,7 @@ import { AgregarPacienteComponent } from './components/principal/agregar-pacient
 import { EliminarPacienteComponent } from './components/principal/eliminar-paciente/eliminar-paciente.component';
 import { ModificarPacienteComponent } from './components/principal/modificar-paciente/modificar-paciente.component';
 import { PacienteComponent } from './components/principal/modificar-paciente/paciente/paciente.component';
+import { PacienteComponent as PacienteSignos} from './components/principal/signosvitales/paciente/paciente.component';
 import { ListaAdministradoresComponent } from './components/principal/lista-administradores/lista-administradores.component';
 import { ModificarAdminComponent } from './components/principal/modificar-admin/modificar-admin.component';
 import { AdministradorComponent } from './components/principal/modificar-admin/administrador/administrador.component';
@@ -70,7 +71,8 @@ import { AdministradorComponent } from './components/principal/modificar-admin/a
     PacienteComponent,
     ListaAdministradoresComponent,
     ModificarAdminComponent,
-    AdministradorComponent
+    AdministradorComponent,
+    PacienteSignos
   ],
   imports: [
     BrowserModule,
@@ -91,8 +93,8 @@ import { AdministradorComponent } from './components/principal/modificar-admin/a
     CalendarModule,
     InputMaskModule,
     ChipsModule,
-    TieredMenuModule,
-    ChartModule
+    ChartModule,
+    TieredMenuModule
   ],
   providers: [NavbarService],
   bootstrap: [AppComponent]
