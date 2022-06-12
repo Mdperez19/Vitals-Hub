@@ -34,7 +34,8 @@ const routes: Routes = [
     {path: 'ModificarPaciente/:paciente',component:PacienteComponent},
     {path: 'EliminarAdmin',component:EliminarAdminComponent},
     {path: 'ModificarAdmin',component:ModificarAdminComponent},
-    {path: 'ModificarAdmin/:administrador',component:AdministradorComponent}
+    {path: 'ModificarAdmin/:administrador',component:AdministradorComponent},
+    {path: 'SignosVitales',component:SignosvitalesComponent},
   ]},
   {path:'**',component:ErrorComponent}
 

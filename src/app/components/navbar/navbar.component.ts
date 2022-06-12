@@ -30,7 +30,8 @@ export class NavbarComponent implements OnInit {
           { label: 'Lista', icon: 'pi pi-fw pi-users', routerLink: 'Pacientes', command: (event) => { this.display = false } },
           { label: 'Agregar paciente', icon: 'pi pi-fw pi-user-plus', routerLink: 'AgregarPaciente', command: (event) => { this.display = false } },
           { label: 'Modificar paciente', icon: 'pi pi-fw pi-save', routerLink: 'ModificarPaciente', command: (event) => { this.display = false } },
-          { label: 'Eliminar paciente', icon: 'pi pi-fw pi-times', routerLink: 'EliminarPaciente', command: (event) => { this.display = false } }
+          { label: 'Eliminar paciente', icon: 'pi pi-fw pi-times', routerLink: 'EliminarPaciente', command: (event) => { this.display = false } },
+          { label: 'Signos Vitales', icon: 'pi pi-fw pi-chart-bar', routerLink: 'SignosVitales', command: (event) => { this.display = false } }
         ]
       },
       {
