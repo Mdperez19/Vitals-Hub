@@ -45,6 +45,8 @@ import { EliminarPacienteComponent } from './components/principal/eliminar-pacie
 import { ModificarPacienteComponent } from './components/principal/modificar-paciente/modificar-paciente.component';
 import { PacienteComponent } from './components/principal/modificar-paciente/paciente/paciente.component';
 import { ListaAdministradoresComponent } from './components/principal/lista-administradores/lista-administradores.component';
+import { ModificarAdminComponent } from './components/principal/modificar-admin/modificar-admin.component';
+import { AdministradorComponent } from './components/principal/modificar-admin/administrador/administrador.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +67,9 @@ import { ListaAdministradoresComponent } from './components/principal/lista-admi
     EliminarPacienteComponent,
     ModificarPacienteComponent,
     PacienteComponent,
-    ListaAdministradoresComponent
+    ListaAdministradoresComponent,
+    ModificarAdminComponent,
+    AdministradorComponent
   ],
   imports: [
     BrowserModule,

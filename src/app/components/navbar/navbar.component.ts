@@ -38,7 +38,9 @@ export class NavbarComponent implements OnInit {
         icon: 'pi pi-fw pi-heart',
         items: [
           { label: 'Lista', icon: 'pi pi-fw pi-users', routerLink: 'Pacientes', command: (event) => { this.display = false } },
-          { label: 'Agregar médico', icon: 'pi pi-fw pi-user-plus', routerLink: 'Agregarmedico', command: (event) => { this.display = false } }
+          { label: 'Agregar médico', icon: 'pi pi-fw pi-user-plus', routerLink: 'Agregarmedico', command: (event) => { this.display = false } },
+          { label: 'Modificar médico', icon: 'pi pi-fw pi-save', routerLink: 'ModificarAdmin', command: (event) => { this.display = false } },
+          { label: 'Eliminar médico', icon: 'pi pi-fw pi-times', routerLink: 'EliminarAdmin', command: (event) => { this.display = false } }
         ]
       },
       {
@@ -46,24 +48,11 @@ export class NavbarComponent implements OnInit {
         icon: 'pi pi-fw pi-star',
         items: [
           { label: 'Agregar administrador', icon: 'pi pi-fw pi-user-plus', routerLink: 'Agregaradmin', command: (event) => { this.display = false } },
-          { label: 'Eliminar administrador', icon: 'pi pi-fw pi-times', routerLink: 'EliminarAdmin', command: (event) => { this.display = false } },
+          { label: 'Modificar administrador', icon: 'pi pi-fw pi-save', routerLink: 'ModificarAdmin', command: (event) => { this.display = false } },
+          { label: 'Eliminar administrador', icon: 'pi pi-fw pi-times', routerLink: 'EliminarAdmin', command: (event) => { this.display = false } }
         ]
-      },
-      {label: 'Notificaciones', icon: 'pi pi-fw pi-bell', routerLink: 'Notificaciones',command:(event)=>{this.display=false}}
+      }
     ];
-
-
-    /* this.items = [
-      {label: 'Pacientes', icon: 'pi pi-fw pi-users',routerLink: 'Pacientes',command:(event)=>{this.display=false}},
-      {label: 'Notificaciones', icon: 'pi pi-fw pi-bell', routerLink: 'Notificaciones',command:(event)=>{this.display=false}},
-      {label: 'Agregar paciente', icon: 'pi pi-fw pi-user-plus',routerLink: 'AgregarPaciente',command:(event)=>{this.display=false}},
-      {label: 'Eliminar paciente', icon: 'pi pi-fw pi-times',routerLink: 'EliminarPaciente',command:(event)=>{this.display=false}},
-      {label: 'Modificar paciente', icon: 'pi pi-fw pi-save',routerLink: 'ModificarPaciente',command:(event)=>{this.display=false}},
-      {label: 'Agregar administrador', icon: 'pi pi-fw pi-star',routerLink: 'Agregaradmin',command:(event)=>{this.display=false}},
-      {label: 'Eliminar administrador', icon: 'pi pi-fw pi-times',routerLink: 'EliminarAdmin',command:(event)=>{this.display=false}},
-      {label: 'Agregar médico', icon: 'pi pi-fw pi-heart',routerLink: 'Agregarmedico',command:(event)=>{this.display=false}}
-  ]; */
-
   }
   regresar() {
     this.navbar.titulo.emit("Página Principal");

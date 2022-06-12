@@ -8,6 +8,8 @@ import { EliminarAdminComponent } from './components/principal/eliminar-admin/el
 import { EliminarPacienteComponent } from './components/principal/eliminar-paciente/eliminar-paciente.component';
 import { HistorialpacientesComponent } from './components/principal/historialpacientes/historialpacientes.component';
 import { ListapacientesComponent } from './components/principal/listapacientes/listapacientes.component';
+import { AdministradorComponent } from './components/principal/modificar-admin/administrador/administrador.component';
+import { ModificarAdminComponent } from './components/principal/modificar-admin/modificar-admin.component';
 import { ModificarPacienteComponent } from './components/principal/modificar-paciente/modificar-paciente.component';
 import { PacienteComponent } from './components/principal/modificar-paciente/paciente/paciente.component';
 import { NotificacionesComponent } from './components/principal/notificaciones/notificaciones.component';
@@ -30,7 +32,9 @@ const routes: Routes = [
     {path: 'EliminarPaciente',component:EliminarPacienteComponent},
     {path: 'ModificarPaciente',component:ModificarPacienteComponent},
     {path: 'ModificarPaciente/:paciente',component:PacienteComponent},
-    {path: 'EliminarAdmin',component:EliminarAdminComponent}
+    {path: 'EliminarAdmin',component:EliminarAdminComponent},
+    {path: 'ModificarAdmin',component:ModificarAdminComponent},
+    {path: 'ModificarAdmin/:administrador',component:AdministradorComponent}
   ]},
   {path:'**',component:ErrorComponent}
 
