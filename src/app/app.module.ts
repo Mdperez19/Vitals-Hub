@@ -19,6 +19,7 @@ import {AccordionModule} from 'primeng/accordion';
 import {CalendarModule} from 'primeng/calendar';
 import {InputMaskModule} from 'primeng/inputmask';
 import {ChipsModule} from 'primeng/chips';
+import {TieredMenuModule} from 'primeng/tieredmenu';
 /******** */
 
 /*****Librerias externas */
@@ -84,7 +85,8 @@ import { ListaAdministradoresComponent } from './components/principal/lista-admi
     AccordionModule,
     CalendarModule,
     InputMaskModule,
-    ChipsModule
+    ChipsModule,
+    TieredMenuModule
   ],
   providers: [NavbarService],
   bootstrap: [AppComponent]

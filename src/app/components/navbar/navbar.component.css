@@ -13,4 +13,8 @@
     height: auto;
     display: block;
 }
+
+:host::ng-deep .p-sidebar-content{
+    overflow-y: inherit;
+}
   

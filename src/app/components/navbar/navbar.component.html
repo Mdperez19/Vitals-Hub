@@ -1,10 +1,12 @@
-<p-sidebar [(visible)]="display" [baseZIndex]="10000">
+<p-sidebar [(visible)]="display" [baseZIndex]="10000" #sidebar>
   <p-avatar label="L" shape="circle" size="xlarge" class="flex justify-content-center"></p-avatar>
   <p-divider></p-divider>
   <h3>Lissete López Hernández</h3>
   <h3>Especialidad: Radiología</h3>
   <p-divider></p-divider>
-  <p-menu [model]="items"></p-menu>
+    <p-tieredMenu [model]="items"></p-tieredMenu>
+
+  
 </p-sidebar>
 
 <div class="grid navbar flex align-content-center flex-wrap ">
