@@ -30,4 +30,13 @@ export class PacientesService {
   eliminarPaciente(index:number){
     this.pacientes.splice(index,1);
   }
+  modificarPaciente(paciente:Paciente){
+    let temp=this.pacientes.find(
+      paciente  => paciente.nss===paciente.nss
+   );
+    let index = this.pacientes.indexOf(temp!);
+
+    this.pacientes[index]=paciente;
+
+  }
 }

@@ -1,0 +1,133 @@
+<div class="grid">
+    <div class="col-12">
+      <h3 class="m-7 flex justify-content-center">Ingresa los datos solicitados en los campos correspondientes
+      </h3>
+    </div>
+  
+    <div class="col-12 flex justify-content-center">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <p-card class="grid" header="Información del paciente {{paciente?.nombre}}" [style]="{'width': '30rem', 'margin-bottom': '3em'}">
+        
+          <div class="field grid">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText name="nombre" placeholder="Nombre completo" [(ngModel)]="nombre">
+            </div>
+          </div>
+          <div class="field grid">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText name="nss" placeholder="NSS" [(ngModel)]="nss">
+            </div>
+          </div>
+          <div class="field grid ">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="number" pInputText name="edad" placeholder="Edad" min="0" [(ngModel)]="edad">
+            </div>
+          </div>
+          <div class="field grid ">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText name="correo" placeholder="Correo" [(ngModel)]="correo">
+            </div>
+          </div>
+          <div class="field grid">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText name="sexo" placeholder="Sexo" [(ngModel)]="sexo">
+            </div>
+          </div>
+          <div class="field grid ">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <p-calendar id="calendario" [numberOfMonths]="3" placeholder="Fecha de nacimiento"
+                [(ngModel)]="fecha_nacimiento" name="fecha_nacimiento" dateFormat="d MM yy"></p-calendar>
+            </div>
+          </div>
+          <div class="field grid ">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <p-inputMask name="telefono" placeholder="Teléfono celular" mask="(99)-99999999" [(ngModel)]="telefono">
+            </p-inputMask>
+          </div>
+  
+          <div class="field grid">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText name="familiar" placeholder="Nombre del familiar"
+                [(ngModel)]="nombre_familiar">
+            </div>
+          </div>
+          <div class="field grid ">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <p-inputMask name="telefono_familiar" placeholder="Teléfono del familiar" mask="(99)-99999999"
+              [(ngModel)]="telefono_familiar"></p-inputMask>
+          </div>
+  
+          <div class="field grid">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText name="diagnostico" placeholder="Diagnóstico" [(ngModel)]="diagnostico">
+            </div>
+          </div>
+          <div class="field grid p-fluid">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <p-chips name="antecedentes_heredofamiliares" placeholder="Antecedentes heredofamiliares"
+              [(ngModel)]="antecedentes_heredofamiliares" separator=","></p-chips>
+          </div>
+  
+          <div class="field grid p-fluid">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <p-chips name="antecedentes_nopatologicos" placeholder="Antecedentes No patológicos"
+              [(ngModel)]="antecedentes_nopatologicos" separator=","></p-chips>
+          </div>
+  
+          <div class="field grid p-fluid">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <p-chips name="antecedentes_patologicos" placeholder="Antecedentes patológicos"
+              [(ngModel)]="antecedentes_patologicos" separator=","></p-chips>
+          </div>
+  
+          <div class="field grid ">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <p-calendar id="calendario" [numberOfMonths]="3" name="fecha_ingreso" placeholder="Fecha de ingreso"
+                [(ngModel)]="fecha_ingreso" dateFormat="d MM yy"></p-calendar>
+            </div>
+          </div>
+  
+          <div class="field grid">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText name="grupo_sanguineo" placeholder="grupo sanguineo"
+                [(ngModel)]="grupo_sanguineo">
+            </div>
+          </div>
+  
+          <div class="field grid">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="number" pInputText name="num_cama" placeholder="Número de cama" [min]="0"
+                [(ngModel)]="num_cama">
+            </div>
+          </div>
+          <ng-template pTemplate="footer">
+            <div class="grid">
+              <div class="col-6 flex justify-content-center">
+                <button pButton type="submit" label="Guardar" icon="pi pi-check"></button>
+              </div>
+              <div class="col-6 flex justify-content-center">
+                <button type="reset" pButton label="Limpiar" icon="pi pi-times" class="p-button-secondary"></button>
+              </div>
+            </div>
+  
+  
+          </ng-template>
+        
+      </p-card>
+  </form>
+    </div>
+  
+  
+  </div>
+  

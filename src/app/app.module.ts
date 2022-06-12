@@ -41,6 +41,8 @@ import { NotificacionesComponent } from './components/principal/notificaciones/n
 import { EliminarAdminComponent } from './components/principal/eliminar-admin/eliminar-admin.component';
 import { AgregarPacienteComponent } from './components/principal/agregar-paciente/agregar-paciente.component';
 import { EliminarPacienteComponent } from './components/principal/eliminar-paciente/eliminar-paciente.component';
+import { ModificarPacienteComponent } from './components/principal/modificar-paciente/modificar-paciente.component';
+import { PacienteComponent } from './components/principal/modificar-paciente/paciente/paciente.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +60,9 @@ import { EliminarPacienteComponent } from './components/principal/eliminar-pacie
     NotificacionesComponent,
     EliminarAdminComponent,
     AgregarPacienteComponent,
-    EliminarPacienteComponent
+    EliminarPacienteComponent,
+    ModificarPacienteComponent,
+    PacienteComponent
   ],
   imports: [
     BrowserModule,

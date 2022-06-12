@@ -7,6 +7,7 @@
     </div>
     <div class="col-12 flex justify-content-center flex-wrap">
         <h2 *ngIf="operacion=='Eliminar'">Selecciona paciente a eliminar</h2>
+        <h2 *ngIf="operacion=='Modificar'">Selecciona paciente a modificar</h2>
     </div>
     <div *ngFor="let paciente of pacientes | filterBy: filtro" class="col-4 w-20rem">
 
@@ -19,13 +20,23 @@
             </a>
         </ng-container>
         <ng-template #eliminar>
-            <ng-container *ngIf="operacion=='Eliminar'">
+            <ng-container *ngIf="operacion=='Eliminar';else modificar">
                 <p-button  styleClass="p-button-text" (onClick)="eliminarPaciente(paciente)">
                     <p-card>
                         <p-avatar label="{{paciente.nombre[0]}}" shape="circle" size="xlarge" class="flex justify-content-center"></p-avatar>
                         <h3>Nombre: {{paciente.nombre}}</h3>
                     </p-card>
                 </p-button>
+            </ng-container>
+        </ng-template>
+        <ng-template #modificar>
+            <ng-container *ngIf="operacion=='Modificar'">
+                <a [routerLink]="['/Principal/ModificarPaciente',paciente.nombre]" class="no-underline w-15rem">
+                    <p-card>
+                        <p-avatar label="{{paciente.nombre[0]}}" shape="circle" size="xlarge" class="flex justify-content-center"></p-avatar>
+                        <h3>Nombre: {{paciente.nombre}}</h3>
+                    </p-card>
+                </a>
             </ng-container>
         </ng-template>
         
