@@ -1,64 +1,64 @@
 <div class="grid">
-    <div class="col-12">
-      <h3 class="m-7 flex justify-content-center">Ingresa los datos solicitados en los campos correspondientes
-      </h3>
-    </div>
-  
-    <div class="col-12 flex justify-content-center">
-      <p-card class="grid" header="Información del administrador"  [style]="{'width': '30rem', 'margin-bottom': '3em'}">
+  <div class="col-12">
+    <h3 class="m-7 flex justify-content-center">Ingresa los datos solicitados en los campos correspondientes
+    </h3>
+  </div>
+
+  <div class="col-12 flex justify-content-center">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <p-card class="grid" header="Información del administrador" [style]="{'width': '30rem', 'margin-bottom': '3em'}">
         <div>
           <div class="field grid">
             <div class="p-inputgroup">
               <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-              <input type="text" pInputText placeholder="Nombre completo">
+              <input type="text" pInputText name="nombre" placeholder="Nombre completo" [(ngModel)]="nombre">
             </div>
           </div>
           <div class="field grid ">
             <div class="p-inputgroup">
               <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-              <input type="text" pInputText placeholder="Correo">
+              <input type="text" pInputText placeholder="Correo" name="correo" [(ngModel)]="correo">
             </div>
           </div>
           <div class="field grid ">
-              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-              <p-inputMask  placeholder="Teléfono celular" mask="(99)-99999999"></p-inputMask>
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <p-inputMask placeholder="Teléfono celular" mask="(99)-99999999" name="telefono" [(ngModel)]="telefono">
+            </p-inputMask>
           </div>
           <div class="field grid ">
-              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-              <p-password placeholder="Contraseña">
-                <ng-template pTemplate="header">
-                    <h5>Pick a password</h5>
-                </ng-template>
-                <ng-template pTemplate="footer">
-                    <p-divider></p-divider>
-                    <p class="mt-2">Suggestions</p>
-                    <ul class="pl-2 ml-2 mt-0">
-                        <li>At least one lowercase</li>
-                        <li>At least one uppercase</li>
-                        <li>At least one numeric</li>
-                        <li>Minimum 8 characters</li>
-                    </ul>
-                </ng-template>
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <p-password placeholder="Contraseña" name="contrasena" [(ngModel)]="contrasena">
+              <ng-template pTemplate="header">
+                <h5>Escoge una contraseña</h5>
+              </ng-template>
+              <ng-template pTemplate="footer">
+                <p-divider></p-divider>
+                <p class="mt-2">Sugerencias</p>
+                <ul class="pl-2 ml-2 mt-0">
+                  <li>Al menos una minúscula</li>
+                  <li>Al menos una mayúscula</li>
+                  <li>Al menos un número</li>
+                  <li>Mínimo 8 caracteres</li>
+                </ul>
+              </ng-template>
             </p-password>
           </div>
         </div>
         <ng-template pTemplate="footer">
-          <div  class="grid">
+          <div class="grid">
             <div class="col-6 flex justify-content-center">
-              <p-button label="Guardar" icon="pi pi-check"></p-button>
+              <p-button type="submit" label="Guardar" icon="pi pi-check"></p-button>
             </div>
             <div class="col-6 flex justify-content-center">
-              <p-button label="Limpiar" icon="pi pi-times" styleClass="p-button-secondary" ></p-button>
+              <p-button type="reset" label="Limpiar" icon="pi pi-times" styleClass="p-button-secondary"></p-button>
             </div>
           </div>
-          
-          
-          
         </ng-template>
       </p-card>
-  
-    </div>
-  
-  
+    </form>
+
+
   </div>
-  
+
+
+</div>
