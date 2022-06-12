@@ -24,6 +24,7 @@ import {TieredMenuModule} from 'primeng/tieredmenu';
 
 /*****Librerias externas */
 import { FilterPipeModule } from 'ngx-filter-pipe';
+import {ChartModule} from 'primeng/chart';
 /******************** */
 
 import { LoginComponent } from './components/sesion/login/login.component';
@@ -90,7 +91,8 @@ import { AdministradorComponent } from './components/principal/modificar-admin/a
     CalendarModule,
     InputMaskModule,
     ChipsModule,
-    TieredMenuModule
+    TieredMenuModule,
+    ChartModule
   ],
   providers: [NavbarService],
   bootstrap: [AppComponent]
