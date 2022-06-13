@@ -34,6 +34,7 @@ export class ListapacientesComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         this.datos.eliminarPaciente(index);
+        this.pacientes=this.datos.getPacientes();
       }
     });
     

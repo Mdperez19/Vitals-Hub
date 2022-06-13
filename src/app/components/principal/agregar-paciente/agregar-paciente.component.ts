@@ -28,7 +28,8 @@ export class AgregarPacienteComponent implements OnInit {
     fecha_ingreso:Date|undefined;
     grupo_sanguineo:string="";
     num_cama:number=0;
-
+    
+    default:Date=new Date("04/06/1960");
   constructor(private navbar: NavbarService,private pacienteService:PacientesService) { }
 
   ngOnInit(): void {
@@ -55,6 +56,12 @@ export class AgregarPacienteComponent implements OnInit {
       }
     });
     
+  }
+
+  getMinDate(){
+    let minDateValue:Date= new Date();
+    minDateValue.setFullYear(minDateValue.getFullYear()-18);
+    return minDateValue;
   }
 
 }

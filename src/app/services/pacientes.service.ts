@@ -43,6 +43,9 @@ export class PacientesService {
     this.pacientes.splice(index,1);
   }
   modificarPaciente(paciente:Paciente){
+    paciente.temperatura=37;
+    paciente.spO2=98;
+    paciente.ppm=89;
     let temp=this.pacientes.find(
       paciente  => paciente.nss===paciente.nss
    );

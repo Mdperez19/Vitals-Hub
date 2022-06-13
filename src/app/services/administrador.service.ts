@@ -6,8 +6,9 @@ import { Administrador } from '../models/administrador.model';
 })
 export class AdministradorService {
   administradores:Administrador[]=[
-    new Administrador("Administrador","admin@gmail.com","af0123c56","5512345678"),
-    new Administrador("Administrador2","admin2@gmail.com","af02443e58","5587654321")
+    new Administrador("Administrador 1","admin@gmail.com","af0123c56","5512345678"),
+    new Administrador("Administrador 2","admin2@gmail.com","af02443e58","5587654321"),
+    new Administrador("Lissete López","lissAdmin@gmail.com","A123#$","5589652301")
   ];
   constructor() { }
 
