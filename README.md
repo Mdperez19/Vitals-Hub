@@ -4,7 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Introduction
 
-VitalsHub is a project developed to address the increasing number of patients in hospitals, particularly during the COVID-19 pandemic. The objective of this project is to assist healthcare professionals in monitoring vital signs of patients, thereby reducing response time in emergency situations.
+VitalsHub is a project developed for the Software Engineering subject. It aims to provide assistance in monitoring the vital signs of patients in hospitals. With the increasing number of patients, especially during the COVID-19 pandemic, healthcare professionals often face challenges in promptly addressing patient needs.
+
+The objective of VitalsHub is to develop a tool that can help healthcare providers track vital signs efficiently, reducing response time in critical situations. By utilizing sensors for measuring oxygen levels, temperature, and heart rate, VitalsHub captures and processes vital sign data using a microcontroller. This data is then transmitted to software for analysis and storage in a secure database.
 
 ## General Objective
 
